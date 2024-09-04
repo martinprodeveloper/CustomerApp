@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">Customer App</string>
+    <string name="app_environment">Ambiente:</string>
+</resources>
