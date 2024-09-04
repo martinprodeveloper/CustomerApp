@@ -1,0 +1,5 @@
+<resources>
+    <!-- App -->
+    <string name="app_name">Customer App</string>
+    <string name="app_environment">Environment:</string>
+</resources>
