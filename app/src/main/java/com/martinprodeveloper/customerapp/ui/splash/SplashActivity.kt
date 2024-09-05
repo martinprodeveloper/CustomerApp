@@ -12,8 +12,10 @@ import androidx.core.view.WindowInsetsCompat
 import com.martinprodeveloper.customerapp.BuildConfig
 import com.martinprodeveloper.customerapp.R
 import com.martinprodeveloper.customerapp.databinding.ActivitySplashBinding
-import com.martinprodeveloper.customerapp.ui.home.HomeActivity
+import com.martinprodeveloper.customerapp.ui.login.LoginActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
 
@@ -51,7 +53,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun goToHome() {
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
         finish()
     }

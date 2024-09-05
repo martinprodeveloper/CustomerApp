@@ -17,6 +17,8 @@ lifecycle = "2.8.4"
 fragment = "1.8.2"
 glide = "4.15.0"
 googleServices = "4.4.2"
+firebaseDatabaseKtx = "21.0.0"
+firebaseAuthKtx = "23.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -39,6 +41,8 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+firebase-database-ktx = { group = "com.google.firebase", name = "firebase-database-ktx", version.ref = "firebaseDatabaseKtx" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
