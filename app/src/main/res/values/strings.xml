@@ -4,6 +4,14 @@
     <string name="app_name">Customer App</string>
     <string name="app_environment">Environment:</string>
 
+    <!-- Login -->
+    <string name="hint_login">+51 999 999 999</string>
+    <string name="verify_login">Verify Phone Number</string>
+
+    <!-- Login Verification -->
+    <string name="hint_login_verification">Enter code</string>
+    <string name="verify_code_login_verification">Verify Code</string>
+
     <!-- Client Create -->
     <string name="title_client_create">Client Create</string>
     <string name="first_name_client_create">First Name</string>
