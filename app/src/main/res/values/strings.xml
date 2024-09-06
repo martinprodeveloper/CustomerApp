@@ -1,3 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CustomerApp</string>
+    <!-- App -->
+    <string name="app_name">Customer App</string>
+    <string name="app_environment">Environment:</string>
+
+    <!-- Login -->
+    <string name="hint_login">+51 999 999 999</string>
+    <string name="verify_login">Verify Phone Number</string>
+
+    <!-- Login Verification -->
+    <string name="hint_login_verification">Enter code</string>
+    <string name="verify_code_login_verification">Verify Code</string>
+
+    <!-- Client Create -->
+    <string name="title_client_create">Client Create</string>
+    <string name="first_name_client_create">First Name</string>
+    <string name="last_name_client_create">Last Name</string>
+    <string name="age_client_create">Age</string>
+    <string name="birth_date_client_create">Birth Date</string>
+    <string name="hint_client_create">Enter</string>
+    <string name="hint_date_client_create">dd/mm/yyyy</string>
+    <string name="send_client_create">Send</string>
 </resources>
