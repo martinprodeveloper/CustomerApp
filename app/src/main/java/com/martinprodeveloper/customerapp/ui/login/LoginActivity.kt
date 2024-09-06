@@ -52,13 +52,15 @@ class LoginActivity : AppCompatActivity() {
                 }
                 is LoginViewModel.AuthenticationState.CodeSent -> {
                     Log.d(TAG, "Código enviado: ${state.verificationId}")
+                    Toast.makeText(this, "Código enviado", Toast.LENGTH_SHORT).show()
+
                     val intent = Intent(this, LoginVerificationActivity::class.java)
                     intent.putExtra("verificationId", state.verificationId)
                     startActivity(intent)
                 }
                 is LoginViewModel.AuthenticationState.Error -> {
                     Log.e(TAG, "Error: ${state.message}")
-                    Toast.makeText(this, "Error: ${state.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error al autenticarse", Toast.LENGTH_SHORT).show()
                 }
             }
         }

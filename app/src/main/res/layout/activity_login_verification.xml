@@ -7,30 +7,54 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.verification.LoginVerificationActivity">
 
-    <EditText
-        android:id="@+id/etVerificationCode"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_verification"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter verification code"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@id/btnVerifyCode"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        android:padding="16dp"
-        android:layout_margin="16dp"/>
-
-    <Button
-        android:id="@+id/btnVerifyCode"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Verify Code"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etVerificationCode"
-        app:layout_constraintVertical_bias="0.5"
-        android:layout_margin="16dp"/>
+        app:layout_constraintVertical_bias="0.4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <!-- Código de verificación -->
+            <EditText
+                android:id="@+id/et_verification_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_login_verification"
+                android:inputType="number"
+                android:padding="16dp"
+                android:background="@drawable/bg_form"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="wrap"/>
+
+            <!-- Botón Verificar -->
+            <Button
+                android:id="@+id/btn_verify_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/verify_code_login_verification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_verification_code"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

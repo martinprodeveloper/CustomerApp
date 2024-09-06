@@ -52,10 +52,12 @@ class LoginVerificationActivity : AppCompatActivity() {
             when (state) {
                 is LoginVerificationViewModel.VerificationState.Authenticated -> {
                     Log.d(TAG, "Código verificado, usuario autenticado")
+                    Toast.makeText(this, "Código verificado, usuario autenticado", Toast.LENGTH_SHORT).show()
                     goToClientCreate()
                 }
                 is LoginVerificationViewModel.VerificationState.Error -> {
-                    Toast.makeText(this, "Error: ${state.message}", Toast.LENGTH_SHORT).show()
+                    Log.d(TAG, "Error: ${state.message}")
+                    Toast.makeText(this, "Ingresa un código válido", Toast.LENGTH_SHORT).show()
                 }
             }
         }
