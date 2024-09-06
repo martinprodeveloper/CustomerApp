@@ -13,9 +13,11 @@ import java.util.concurrent.TimeUnit
 import com.google.firebase.FirebaseException
 
 @HiltViewModel
-class LoginViewModel @Inject constructor() : ViewModel() {
+class LoginViewModel @Inject constructor(
+    private val auth: FirebaseAuth,
+    private val phoneAuthProvider: PhoneAuthProvider
+) : ViewModel() {
 
-    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private val _authenticationState = MutableLiveData<AuthenticationState>()
     val authenticationState: LiveData<AuthenticationState> get() = _authenticationState
 
@@ -36,7 +38,7 @@ class LoginViewModel @Inject constructor() : ViewModel() {
             }
         }
 
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+        phoneAuthProvider.verifyPhoneNumber(
             phoneNumber,                  // Número de teléfono a verificar
             60,                           // Tiempo de espera en segundos
             TimeUnit.SECONDS,             // Unidad de tiempo
@@ -45,7 +47,7 @@ class LoginViewModel @Inject constructor() : ViewModel() {
         )
     }
 
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+    fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         auth.signInWithCredential(credential)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {

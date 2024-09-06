@@ -1,6 +1,7 @@
 package com.martinprodeveloper.customerapp.di
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
 import dagger.Provides
@@ -22,5 +23,11 @@ object AppModule {
     @Singleton
     fun provideFirebaseAuth(): FirebaseAuth {
         return FirebaseAuth.getInstance()
+    }
+
+    @Provides
+    @Singleton
+    fun providePhoneAuthProvider(): PhoneAuthProvider {
+        return PhoneAuthProvider.getInstance()
     }
 }
